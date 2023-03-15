@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MtnMoMo.NET", "MtnMoMo.NET\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MtnMoMo.NET.Tests.Unit", "MtnMoMo.NET.Tests.Unit\MtnMoMo.NET.Tests.Unit.csproj", "{7D79CF85-DF75-4D5D-B161-4F4396B0E57A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MtnMoMo.NET.Tests.Acceptance", "MtnMoMo.NET.Tests.Acceptance\MtnMoMo.NET.Tests.Acceptance.csproj", "{175FBE52-85F6-4CF7-A1B2-67A7FF6617BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{7D79CF85-DF75-4D5D-B161-4F4396B0E57A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D79CF85-DF75-4D5D-B161-4F4396B0E57A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D79CF85-DF75-4D5D-B161-4F4396B0E57A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{175FBE52-85F6-4CF7-A1B2-67A7FF6617BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{175FBE52-85F6-4CF7-A1B2-67A7FF6617BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{175FBE52-85F6-4CF7-A1B2-67A7FF6617BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{175FBE52-85F6-4CF7-A1B2-67A7FF6617BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
