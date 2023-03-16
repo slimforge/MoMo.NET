@@ -7,34 +7,32 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using MtnMoMo.NET.Models.Configurations;
-//using MtnMoMo.NET.Models.ExternalProducts;
 using RESTFulSense.Clients;
 
-namespace MtnMoMo.NET.Brokers.MtnMoMoApis
+namespace MtnMoMo.NET.Brokers.Mtn
 {
-    internal partial class MtnMoMoBroker : IMtnMoMoBroker
+    internal partial class MtnBroker : IMtnBroker
     {
         private readonly ApiConfigurations apiConfigurations;
-        private readonly IRESTFulApiFactoryClient apiClient, authApiClient;
+        private readonly IRESTFulApiFactoryClient apiClient, authClient;
         private readonly HttpClient httpClient, authHttpClient;
 
-        public MtnMoMoBroker(ApiConfigurations apiConfigurations)
+        public MtnBroker(ApiConfigurations apiConfigurations)
         {
             this.apiConfigurations = apiConfigurations;
             this.httpClient = SetupHttpClient();
             this.apiClient = SetupApiClient();
             this.authHttpClient = SetupAuthHttpClient();
-            this.authApiClient = SetupAuthApiClient();
+            this.authClient = SetupAuthClient();
         }
-
-        private async ValueTask<T> GetAuthAsync<T>(string relativeUrl) =>
-            await this.authApiClient.GetContentAsync<T>(relativeUrl);
 
         private async ValueTask<T> GetAsync<T>(string relativeUrl) =>
             await this.apiClient.GetContentAsync<T>(relativeUrl);
 
         private async ValueTask<T> PostAsync<T>(string relativeUrl, T content) =>
             await this.apiClient.PostContentAsync(relativeUrl, content);
+        private async ValueTask<TResult> PostAsyncForAuth<TRequest, TResult>(string relativeUrl, TRequest content) =>
+            await this.authClient.PostContentAsync<TRequest, TResult>(relativeUrl, content, mediaType: "application/json");
 
         private async ValueTask<TResult> PostAsync<TRequest, TResult>(string relativeUrl, TRequest content) =>
             await this.apiClient.PostContentAsync<TRequest, TResult>(relativeUrl, content, mediaType: "application/json");
@@ -95,10 +93,11 @@ namespace MtnMoMo.NET.Brokers.MtnMoMoApis
             return httpClient;
         }
 
+        private IRESTFulApiFactoryClient SetupAuthClient() =>
+            new RESTFulApiFactoryClient(this.authHttpClient);
+
         private IRESTFulApiFactoryClient SetupApiClient() =>
             new RESTFulApiFactoryClient(this.httpClient);
 
-        private IRESTFulApiFactoryClient SetupAuthApiClient() =>
-            new RESTFulApiFactoryClient(this.authHttpClient);
     }
 }

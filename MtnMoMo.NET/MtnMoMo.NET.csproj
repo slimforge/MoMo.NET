@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="RESTFulSense" Version="2.10.0" />
+    <InternalsVisibleTo Include="MtnMoMo.NET.Tests.Unit" />
   </ItemGroup>
 
 </Project>

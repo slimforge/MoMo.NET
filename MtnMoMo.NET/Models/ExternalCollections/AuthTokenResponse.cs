@@ -1,10 +1,11 @@
-    using System;
-    using System.Collections.Generic;
-    using System.Globalization;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
+// --------------------------------------------------------------- 
+// Copyright (c) Coalition of the Good-Hearted Engineers 
+// ---------------------------------------------------------------
 
-namespace MtnMoMo.NET.Models.ExternalProducts
+using System;
+using Newtonsoft.Json;
+
+namespace MtnMoMo.NET.Models.ExternalCollections
 {
     public partial class AuthTokenResponse
     {
