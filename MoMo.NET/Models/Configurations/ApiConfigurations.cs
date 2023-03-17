@@ -1,4 +1,8 @@
-namespace MtnMoMo.NET.Models.Configurations
+// --------------------------------------------------------------- 
+// Copyright (c) Coalition of the Good-Hearted Engineers 
+// -----
+
+namespace MoMo.NET.Models.Configurations
 {
     internal class ApiConfigurations
     {

@@ -21,8 +21,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\MtnMoMo.NET\MtnMoMo.NET.csproj" />
-  </ItemGroup>
-
 </Project>

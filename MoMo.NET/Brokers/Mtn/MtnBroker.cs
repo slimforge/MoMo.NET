@@ -6,10 +6,10 @@ using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using MtnMoMo.NET.Models.Configurations;
+using MoMo.NET.Models.Configurations;
 using RESTFulSense.Clients;
 
-namespace MtnMoMo.NET.Brokers.Mtn
+namespace MoMo.NET.Brokers.Mtn
 {
     internal partial class MtnBroker : IMtnBroker
     {

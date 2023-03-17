@@ -6,9 +6,9 @@ using System;
 using Newtonsoft.Json;
 
 
-namespace MtnMoMo.NET.Models.ExternalCollections
+namespace MoMo.NET.Models.ExternalRecoveries
 {
-    public partial class UserInfoResponse
+    internal class ExternalUserInfoResponse
     {
         [JsonProperty("given_name")]
         public string GivenName { get; set; }
