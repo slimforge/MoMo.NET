@@ -1,4 +1,4 @@
-name: OpenAI.NET Build
+name: MoMo.NET Build
 on:
   push:
     branches:

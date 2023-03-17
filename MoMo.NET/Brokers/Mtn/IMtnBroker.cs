@@ -2,7 +2,7 @@
 // Copyright (c) Coalition of the Good-Hearted Engineers 
 // ---------------------------------------------------------------
 
-namespace MtnMoMo.NET.Brokers.Mtn
+namespace MoMo.NET.Brokers.Mtn
 {
     internal partial interface IMtnBroker
     {

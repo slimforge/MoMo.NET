@@ -4,7 +4,7 @@
 
 using Xunit;
 
-namespace MtnMoMo.NET.Tests.Acceptance
+namespace MoMo.NET.Tests.Acceptance
 {
     public class DeleteMe
     {

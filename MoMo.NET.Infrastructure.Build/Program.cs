@@ -8,7 +8,7 @@ using ADotNet.Models.Pipelines.GithubPipelines.DotNets;
 using ADotNet.Models.Pipelines.GithubPipelines.DotNets.Tasks;
 using ADotNet.Models.Pipelines.GithubPipelines.DotNets.Tasks.SetupDotNetTaskV1s;
 
-namespace MtnMoMo.NET.Infrastructure.Build
+namespace MoMo.NET.Infrastructure.Build
 {
     internal class Program
     {
@@ -18,7 +18,7 @@ namespace MtnMoMo.NET.Infrastructure.Build
 
             var githubPipeline = new GithubPipeline
             {
-                Name = "OpenAI.NET Build",
+                Name = "MoMo.NET Build",
 
                 OnEvents = new Events
                 {

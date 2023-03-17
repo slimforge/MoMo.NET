@@ -5,9 +5,9 @@
 using System;
 using Newtonsoft.Json;
 
-namespace MtnMoMo.NET.Models.ExternalCollections
+namespace MoMo.NET.Models.ExternalRecoveries
 {
-    public partial class AccountBalanceResponse
+    internal class ExternalAccountBalanceResponse
     {
         [JsonProperty("availableBalance")]
         public string AvailableBalance { get; set; }

@@ -4,11 +4,11 @@
 
 using Xunit;
 using System.Threading.Tasks;
-using MtnMoMo.NET.Models.Configurations;
-using MtnMoMo.NET.Brokers.Mtn;
-using MtnMoMo.NET.Models.ExternalCollections;
+using MoMo.NET.Models.Configurations;
+using MoMo.NET.Brokers.Mtn;
+using MoMo.NET.Models.ExternalRecoveries;
 
-namespace MtnMoMo.NET.Tests.Unit
+namespace MoMo.NET.Tests.Unit
 {
     public class DeleteMe
     {
