@@ -7,7 +7,7 @@ namespace MoMo.NET.Models.Recoveries
 {
     public class AccountBalanceResponse
     {
-        public string AvailableBalance { get; set; }
+        public int AvailableBalance { get; set; }
         public string Currency { get; set; }
     }
 }

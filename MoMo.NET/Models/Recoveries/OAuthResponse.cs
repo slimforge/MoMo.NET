@@ -10,7 +10,7 @@ namespace MoMo.NET.Models.Recoveries
     {
         public string AccessToken { get; set; }
         public string TokenType { get; set; }
-        public long ExpiresIn { get; set; }
+        public int ExpiresIn { get; set; }
         public DateTime ExpiresAt { get; set; }
         public bool IsValidAndNotExpiring
         {
