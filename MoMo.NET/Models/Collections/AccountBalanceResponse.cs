@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MoMo.NET.Models.Recoveries
+namespace MoMo.NET.Models.Collections
 {
     public class AccountBalanceResponse
     {

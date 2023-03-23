@@ -4,18 +4,23 @@
 using System;
 using System.Threading.Tasks;
 using MoMo.NET.Brokers.Mtn;
-using MoMo.NET.Models.Recoveries;
+using MoMo.NET.Models.Collections;
 
-namespace MoMo.NET.Services.Foundations.Recoveries
+namespace MoMo.NET.Services.Foundations.Collections
 {
-    internal partial class RecoveryService : IRecoveryService
+    internal partial class CollectionService : ICollectionService
     {
         private readonly IMtnBroker mtnBroker;
 
-        public RecoveryService(IMtnBroker mtnBroker) =>
+        public CollectionService(IMtnBroker mtnBroker) =>
             this.mtnBroker = mtnBroker;
 
-        public ValueTask<Recovery> AuthenticateClientAsync()
+        public ValueTask<Collection> AuthenticateClientAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ValueTask<Collection> PromptRecoveryAsync(Collection recoveryRequest)
         {
             throw new NotImplementedException();
         }

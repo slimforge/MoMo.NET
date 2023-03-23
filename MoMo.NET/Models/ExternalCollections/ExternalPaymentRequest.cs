@@ -4,7 +4,7 @@
 
 using Newtonsoft.Json;
 
-namespace MoMo.NET.Models.ExternalRecoveries
+namespace MoMo.NET.Models.ExternalCollections
 {
     internal class ExternalPaymentRequest
     {

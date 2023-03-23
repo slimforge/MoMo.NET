@@ -6,7 +6,7 @@ using Xunit;
 using System.Threading.Tasks;
 using MoMo.NET.Models.Configurations;
 using MoMo.NET.Brokers.Mtn;
-using MoMo.NET.Models.ExternalRecoveries;
+using MoMo.NET.Models.ExternalCollections;
 
 namespace MoMo.NET.Tests.Unit
 {
