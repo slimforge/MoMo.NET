@@ -39,8 +39,8 @@ namespace MoMo.NET.Tests.Unit.Foundations.Collections
             };
         }
 
-        private Expression<Func<ExternalPaymentRequest, bool>> SameExternalPaymentRequestAs(
-            ExternalPaymentRequest expectedExternalPaymentRequest)
+        private Expression<Func<ExternalCollectionRequest, bool>> SameExternalPaymentRequestAs(
+            ExternalCollectionRequest expectedExternalPaymentRequest)
         {
             return actualExternalPaymentRequest =>
                 this.compareLogic.Compare(expectedExternalPaymentRequest, actualExternalPaymentRequest)

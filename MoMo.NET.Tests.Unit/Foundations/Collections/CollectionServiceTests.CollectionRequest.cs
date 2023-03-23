@@ -25,17 +25,21 @@ namespace MoMo.NET.Tests.Unit.Foundations.Collections
                 Amount = randomRecoveryProperties.Amount,
                 Currency = randomRecoveryProperties.Currency,
                 TransactionId = randomRecoveryProperties.TransactionId,
-                MobileNumber = randomRecoveryProperties.MobileNumber,
+                Payer = new Payer
+                {
+                    PartyIdType = "MSISDN",
+                    PartyId = randomRecoveryProperties.PartyId
+                },
                 Memo = randomRecoveryProperties.Memo,
                 PayeeMessage = randomRecoveryProperties.PayeeMessage
             };
 
             Collection randomRecovery = new Collection
             {
-                RecoveryRequest = randomRecoveryRequest
+                CollectionRequest = randomRecoveryRequest
             };
 
-             var externalPaymentRequest = new ExternalPaymentRequest
+             var externalPaymentRequest = new ExternalCollectionRequest
             {
                 Amount = randomRecoveryProperties.Amount,
                 Currency = randomRecoveryProperties.Currency,
@@ -43,7 +47,7 @@ namespace MoMo.NET.Tests.Unit.Foundations.Collections
                 Payer = new ExternalPayer
                 {
                     PartyIdType = "MSISDN",
-                    PartyId = randomRecoveryProperties.MobileNumber
+                    PartyId = randomRecoveryProperties.PartyId,
                 },
                 PayerMessage = randomRecoveryProperties.Memo,
                 PayeeNote = randomRecoveryProperties.PayeeMessage
@@ -53,10 +57,14 @@ namespace MoMo.NET.Tests.Unit.Foundations.Collections
             Collection expectedRecovery = inputRecovery.DeepClone();
             //expectedRecovery.RecoveryRequest = externalPaymentRequest;
             
-            ExternalPaymentRequest mappedExternalPaymentRequest = 
+            ExternalCollectionRequest mappedExternalPaymentRequest = 
                 externalPaymentRequest;
 
-            string returnedExternalPaymentResponse = "some string";
+            ExternalCollectionResponse returnedExternalPaymentResponse = 
+                new ExternalCollectionResponse
+                {
+                    ResponseCode = randomRecoveryProperties.ResponseCode
+                };
 
             this.mtnBrokerMock.Setup(broker =>
                 broker.PostPaymentRequestAsync(It.Is(
@@ -65,7 +73,7 @@ namespace MoMo.NET.Tests.Unit.Foundations.Collections
 
             // when
             Collection actualRecovery =
-                await this.recoveryService.PromptRecoveryAsync(inputRecovery);
+                await this.recoveryService.PromptCollectionRequestAsync(inputRecovery);
 
             // then
             actualRecovery.Should().BeEquivalentTo(expectedRecovery);

@@ -8,7 +8,7 @@ namespace MoMo.NET.Services.Foundations.Collections
 {
     internal interface ICollectionService
     {
-       ValueTask<Collection> AuthenticateClientAsync(); 
-       ValueTask<Collection> PromptRecoveryAsync(Collection recoveryRequest); 
+       ValueTask<Collection> RequestAuthAsync(); 
+       ValueTask<Collection> PromptCollectionRequestAsync(Collection collection); 
     }
 }

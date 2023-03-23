@@ -12,6 +12,6 @@ namespace MoMo.NET.Brokers.Mtn
         ValueTask<ExternalOAuthResponse> GenenerateOAuthTokenAsync();
         ValueTask<ExternalAccountBalanceResponse> GetAccountBalanceAsync();
         ValueTask<ExternalUserInfoResponse> GetUserInformationAsync(string accountHolderMSISDN);
-        ValueTask<string> PostPaymentRequestAsync(ExternalPaymentRequest requestToPayRequest);
+        ValueTask<ExternalCollectionResponse> PostPaymentRequestAsync(ExternalCollectionRequest requestToPayRequest);
     }
 }

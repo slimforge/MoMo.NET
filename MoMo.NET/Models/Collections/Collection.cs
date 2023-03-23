@@ -7,8 +7,10 @@ namespace MoMo.NET.Models.Collections
 {
     public class Collection
     {
-       public CollectionRequest RecoveryRequest { get; set; }
+       public CollectionRequest CollectionRequest { get; set; }
        public OAuthResponse OAuthRespose { get; set; }
        public AccountBalanceResponse AccountBalanceResponse { get; set; }
+
+       public CollectionResponse CollectionResponse { get; set; }
     }
 }
