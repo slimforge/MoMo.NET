@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MoMo.NET.Models.Recoveries
+namespace MoMo.NET.Models.Collections
 {
-    public class Recovery
+    public class Collection
     {
-       public RecoveryRequest RecoveryRequest { get; set; }
+       public CollectionRequest CollectionRequest { get; set; }
        public OAuthResponse OAuthRespose { get; set; }
        public AccountBalanceResponse AccountBalanceResponse { get; set; }
+
+       public CollectionResponse CollectionResponse { get; set; }
     }
 }

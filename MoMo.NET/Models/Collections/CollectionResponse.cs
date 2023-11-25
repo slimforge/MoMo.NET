@@ -2,10 +2,10 @@
 // Copyright (c) Coalition of the Good-Hearted Engineers 
 // -----
 
-namespace MoMo.NET.Models.Recoveries
+namespace MoMo.NET.Models.Collections
 {
-    public class RecoveryResponse
+    public class CollectionResponse
     {
-
+        public string ResponseCode { get; set; }
     }
 }

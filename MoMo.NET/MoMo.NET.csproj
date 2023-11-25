@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+		<InternalsVisibleTo Include="MoMo.NET.Tests.Unit" />
+		<InternalsVisibleTo Include="DynamicProxyGenAssembly2" />
+	</ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="RESTFulSense" Version="2.10.0" />
     <InternalsVisibleTo Include="MoMo.NET.Tests.Unit" />
   </ItemGroup>

@@ -6,7 +6,7 @@ using System;
 using Newtonsoft.Json;
 
 
-namespace MoMo.NET.Models.ExternalRecoveries
+namespace MoMo.NET.Models.ExternalCollections
 {
     internal class ExternalUserInfoResponse
     {

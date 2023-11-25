@@ -4,13 +4,13 @@
 
 using System;
 
-namespace MoMo.NET.Models.Recoveries
+namespace MoMo.NET.Models.Collections
 {
     public class OAuthResponse
     {
         public string AccessToken { get; set; }
         public string TokenType { get; set; }
-        public long ExpiresIn { get; set; }
+        public int ExpiresIn { get; set; }
         public DateTime ExpiresAt { get; set; }
         public bool IsValidAndNotExpiring
         {

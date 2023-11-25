@@ -4,9 +4,9 @@
 
 using Newtonsoft.Json;
 
-namespace MoMo.NET.Models.ExternalRecoveries
+namespace MoMo.NET.Models.ExternalCollections
 {
-    internal class ExternalPaymentRequest
+    internal class ExternalCollectionRequest
     {
         [JsonProperty("amount")]
         public int Amount { get; set; } = 0;
