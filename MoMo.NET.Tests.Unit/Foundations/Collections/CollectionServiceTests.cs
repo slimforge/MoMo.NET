@@ -20,13 +20,13 @@ namespace MoMo.NET.Tests.Unit.Foundations.Collections
     {
         private readonly Mock<IMtnBroker> mtnBrokerMock;
         private readonly ICompareLogic compareLogic;
-        private readonly ICollectionService recoveryService;
+        private readonly ICollectionService collectionService;
 
         public CollectionServiceTests() 
         {
             this.mtnBrokerMock = new Mock<IMtnBroker>();
             this.compareLogic = new CompareLogic();
-            this.recoveryService = new CollectionService(
+            this.collectionService = new CollectionService(
                 mtnBroker: this.mtnBrokerMock.Object);
         } 
 
@@ -75,9 +75,9 @@ namespace MoMo.NET.Tests.Unit.Foundations.Collections
             new IntRange(min: 0, max: 10000).GetValue();
         private static string CreateRandomString() =>
             new MnemonicString().GetValue();
-        private static Collection CreateRandomRecovery() =>
-            CreateRecoveryFiller().Create();
-        private static Filler<Collection> CreateRecoveryFiller()
+        private static Collection CreateRandomCollection() =>
+            CreateCollectionFiller().Create();
+        private static Filler<Collection> CreateCollectionFiller()
         {
             var filler = new Filler<Collection>();
 

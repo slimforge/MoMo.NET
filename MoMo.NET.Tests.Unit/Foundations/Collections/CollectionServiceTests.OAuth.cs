@@ -51,7 +51,7 @@ namespace MoMo.NET.Tests.Unit.Foundations.Collections
             
              // when
             Collection actualRecovery =
-                await this.recoveryService.RequestAuthAsync();
+                await this.collectionService.RequestAuthAsync();
 
             // then
             actualRecovery.Should().BeEquivalentTo(expectedRecovery);

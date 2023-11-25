@@ -8,11 +8,12 @@ using Moq;
 using Xunit;
 using MoMo.NET.Models.Collections;
 using MoMo.NET.Models.ExternalCollections;
+using MoMo.NET.Services.Foundations.Collections;
 
 namespace MoMo.NET.Tests.Unit.Foundations.Collections
 {
     public partial class CollectionServiceTests
-    {
+    {        
 
         [Fact]
         public async Task ShouldPromptCollectionRequestAsync()
@@ -73,7 +74,7 @@ namespace MoMo.NET.Tests.Unit.Foundations.Collections
 
             // when
             Collection actualRecovery =
-                await this.recoveryService.PromptCollectionRequestAsync(inputRecovery);
+                await this.collectionService.PromptCollectionRequestAsync(inputRecovery);
 
             // then
             actualRecovery.Should().BeEquivalentTo(expectedRecovery);
